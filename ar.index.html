@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أكاديمية إيكو فيرت للتميز في عزل الجدران المجوفة</title>
+    <meta name="description" content="أكاديمية إيكو فيرت هي المنصة المغربية الرائدة للتدريب والاعتماد في مجال عزل الجدران المجوفة، تربط بين المقاولين المعتمدين، موردي المنتجات، والعملاء السكنيين/التجاريين.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Tahoma', 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            direction: rtl;
+            text-align: right;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background-color: #2c5530;
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            flex-direction: row-reverse;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-direction: row-reverse;
+        }
+        .logo h1 {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            flex-wrap: wrap;
+            flex-direction: row-reverse;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: rgba(255,255,255,0.2);
+        }
+        .lang-switcher a {
+            background-color: #d2691e;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .hero {
+            background: linear-gradient(135deg, #2c5530 0%, #4a7c59 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .hero h3 {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            color: #f0f8ff;
+        }
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .btn-primary {
+            background-color: #d2691e;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .btn-primary:hover {
+            background-color: #b8601a;
+            transform: translateY(-2px);
+        }
+        section {
+            padding: 60px 0;
+        }
+        section:nth-child(even) {
+            background-color: white;
+        }
+        section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #2c5530;
+        }
+        section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #2c5530;
+        }
+        section p {
+            margin-bottom: 20px;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+        .service-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .service-item {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: right;
+        }
+        .service-item h3 {
+            color: #d2691e;
+            margin-bottom: 15px;
+        }
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .step-item {
+            text-align: center;
+            padding: 20px;
+        }
+        .step-item span {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-color: #d2691e;
+            color: white;
+            border-radius: 50%;
+            line-height: 50px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .benefit-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .benefit-item {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            border-right: 4px solid #2c5530;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            text-align: right;
+        }
+        .testimonial-slider {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .testimonial-item {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: right;
+        }
+        .testimonial-item p {
+            font-style: italic;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        .testimonial-item h4 {
+            color: #d2691e;
+            font-weight: bold;
+        }
+        .faq-item {
+            background: white;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .faq-item h3 {
+            background-color: #2c5530;
+            color: white;
+            padding: 20px;
+            margin: 0;
+            cursor: pointer;
+            text-align: right;
+        }
+        .faq-item p {
+            padding: 20px;
+            margin: 0;
+            background-color: #f8f9fa;
+            text-align: right;
+        }
+        .cta-footer {
+            background: linear-gradient(135deg, #2c5530 0%, #4a7c59 100%);
+            color: white;
+            text-align: center;
+        }
+        .cta-footer h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        .cta-footer form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: grid;
+            gap: 20px;
+            text-align: right;
+        }
+        .cta-footer input,
+        .cta-footer textarea {
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-family: inherit;
+            text-align: right;
+        }
+        footer {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+        footer .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            flex-direction: row-reverse;
+        }
+        .social-links {
+            display: flex;
+            gap: 20px;
+            flex-direction: row-reverse;
+        }
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            nav ul {
+                flex-direction: row;
+                justify-content: center;
+            }
+            .hero h2 {
+                font-size: 2rem;
+            }
+            .service-list,
+            .steps,
+            .benefit-list,
+            .testimonial-slider {
+                grid-template-columns: 1fr;
+            }
+            footer .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>أكاديمية إيكو فيرت</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#accueil">الرئيسية</a></li>
+                    <li><a href="#apropos">عن الأكاديمية</a></li>
+                    <li><a href="#services">الخدمات</a></li>
+                    <li><a href="#fonctionnement">كيف نعمل</a></li>
+                    <li><a href="#avantages">المزايا</a></li>
+                    <li><a href="#temoignages">شهادات العملاء</a></li>
+                    <li><a href="#faq">الأسئلة الشائعة</a></li>
+                    <li><a href="#contact">اتصل بنا</a></li>
+                </ul>
+            </nav>
+            <div class="lang-switcher">
+                <a href="../fr/index.html">Français</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="accueil" class="hero">
+        <div class="container">
+            <h2>أتقن عزل الجدران المجوفة في المغرب</h2>
+            <h3>شريكك نحو التميز في كفاءة الطاقة والامتثال التنظيمي</h3>
+            <p>أكاديمية إيكو فيرت هي المنصة الرائدة في المغرب، تربط بين المقاولين المعتمدين، موردي المواد المبتكرة، والعملاء الباحثين عن عزل حراري فائق. تدرب، احصل على الاعتماد، وحوّل المساكن المغربية.</p>
+            <a href="#contact" class="btn-primary">اطلب عرض سعر مجاني</a>
+        </div>
+    </section>
+
+    <section id="apropos" class="about">
+        <div class="container">
+            <h2>عن أكاديمية إيكو فيرت</h2>
+            <p>ولدت أكاديمية إيكو فيرت من رؤية لتحويل قطاع العزل في المغرب. نحن منصة مخصصة للتميز والابتكار والاستدامة، نعمل كجسر بين المهنيين المؤهلين، المواد المتطورة، والاحتياجات المتزايدة لأصحاب العقارات والمطورين.</p>
+            <p>مهمتنا هي ضمان أن كل مشروع عزل يلتزم بأعلى معايير الجودة وكفاءة الطاقة والامتثال التنظيمي (خاصة القانون 47-09 وتوجيهات الوكالة المغربية للنجاعة الطاقية AMEE). نحن ملتزمون ببناء نظام بيئي موثوق به حيث تتوافق الأداء الحراري مع المسؤولية البيئية وراحة العيش.</p>
+            <h3>قيمنا الأساسية:</h3>
+            <ul>
+                <li><strong>الثقة:</strong> بناء علاقات دائمة قائمة على الشفافية والنزاهة.</li>
+                <li><strong>الابتكار:</strong> تبني أحدث التقنيات والأساليب في العزل.</li>
+                <li><strong>المسؤولية البيئية:</strong> تعزيز الحلول المستدامة لمغرب أكثر خضرة.</li>
+                <li><strong>التميز:</strong> السعي لتحقيق الكمال في كل تدريب، كل اعتماد، وكل مشروع.</li>
+                <li><strong>التوطين:</strong> دمج خصوصيات السوق المغربي واللوائح المحلية.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2>خدماتنا في عزل الجدران المجوفة</h2>
+            <p>تربطك أكاديمية إيكو فيرت بأفضل الخبراء والحلول لتحقيق عزل حراري مثالي لمبانيكم.</p>
+            <div class="service-list">
+                <div class="service-item">
+                    <h3>العزل بحقن EPS</h3>
+                    <p>حل اقتصادي وفعال، يضمن حقن حبيبات البوليسترين الموسع (EPS) في الجدران المجوفة عزلاً حرارياً وصوتياً فائقاً، مما يقلل بشكل كبير من فواتير الطاقة.</p>
+                </div>
+                <div class="service-item">
+                    <h3>العزل بحقن رغوة البولي يوريثان</h3>
+                    <p>لتحقيق أقصى أداء، توفر رغوة البولي يوريثان المحقونة عزلاً بدون جسور حرارية، إحكاماً مثالياً للهواء، ومتانة استثنائية، مما يجعلها مثالية للمشاريع المتطلبة.</p>
+                </div>
+                <div class="service-item">
+                    <h3>تدقيقات حرارية مفصلة</h3>
+                    <p>يقوم خبراؤنا بإجراء تشخيصات دقيقة لأداء الطاقة في مبناكم، وتحديد نقاط فقدان الحرارة واقتراح حلول عزل مخصصة.</p>
+                </div>
+                <div class="service-item">
+                    <h3>التحكم في الرطوبة والتهوية</h3>
+                    <p>العزل يسير جنباً إلى جنب مع إدارة جيدة للرطوبة. نقدم حلولاً متكاملة لمنع التكثف وضمان جودة هواء داخلي صحية.</p>
+                </div>
+                <div class="service-item">
+                    <h3>شهادة المطابقة</h3>
+                    <p>احصلوا على شهادات مطابقة معترف بها، تثبت أن عزلكم يلتزم بالقانون 47-09، ومعايير RTCM، ومتطلبات الوكالة المغربية للنجاعة الطاقية (AMEE)، مما يزيد من قيمة عقاركم.</p>
+                </div>
+                <div class="service-item">
+                    <h3>استشارات في المواد الصديقة للبيئة</h3>
+                    <p>نوجهكم نحو مواد العزل الأكثر استدامة وصديقة للبيئة، بما يتماشى مع مبادئ ESG وأهداف التنمية المستدامة للمغرب.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="fonctionnement" class="how-it-works">
+        <div class="container">
+            <h2>كيف نعمل؟</h2>
+            <p>منصتنا تبسط عملية العزل، من عرض السعر إلى الاعتماد.</p>
+            <div class="steps">
+                <div class="step-item">
+                    <span>1</span>
+                    <h3>اطلب عرض سعر</h3>
+                    <p>املأ نموذجنا عبر الإنترنت بتفاصيل مشروعك. إنه سريع ومجاني.</p>
+                </div>
+                <div class="step-item">
+                    <span>2</span>
+                    <h3>احصل على عروض معتمدة</h3>
+                    <p>نربطك بمقاولين معتمدين وموردي مواد، تم التحقق منهم جميعاً من قبل أكاديمية إيكو فيرت.</p>
+                </div>
+                <div class="step-item">
+                    <span>3</span>
+                    <h3>اختر خبيرك</h3>
+                    <p>قارن عروض الأسعار، اطلع على ملفات المهنيين، واختر العرض الأنسب لك.</p>
+                </div>
+                <div class="step-item">
+                    <span>4</span>
+                    <h3>التنفيذ والتفتيش</h3>
+                    <p>يتم التركيب وفقاً لأعلى المعايير. يضمن التفتيش بعد العمل الجودة.</p>
+                </div>
+                <div class="step-item">
+                    <span>5</span>
+                    <h3>الاعتماد والضمان</h3>
+                    <p>احصل على شهادة المطابقة الخاصة بك واستفد من ضمان أكاديمية إيكو فيرت لراحة بال تامة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="avantages" class="benefits">
+        <div class="container">
+            <h2>مزايا عزل الجدران المجوفة</h2>
+            <p>الاستثمار في العزل هو استثمار في راحتك، محفظتك، ومستقبل الكوكب.</p>
+            <div class="benefit-list">
+                <div class="benefit-item">
+                    <h3>توفير كبير في الطاقة</h3>
+                    <p>قلل فواتير التدفئة والتبريد بنسبة تصل إلى 30-40% عن طريق تقليل فقدان الحرارة.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>راحة حرارية مثالية</h3>
+                    <p>استمتع بدرجة حرارة داخلية مستقرة ومريحة على مدار العام، بدون تيارات هوائية أو مناطق باردة.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>الامتثال التنظيمي</h3>
+                    <p>التزم بالقانون 47-09 بشأن كفاءة الطاقة ولوائح البناء المغربية، مما يزيد من قيمة عقارك.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>تقليل البصمة الكربونية</h3>
+                    <p>ساهم في مكافحة تغير المناخ عن طريق تقليل انبعاثات ثاني أكسيد الكربون من مبناكم.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>تحسين جودة الهواء الداخلي</h3>
+                    <p>العزل الجيد يقلل من مشاكل الرطوبة والعفن، مما يعزز بيئة أكثر صحة.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>زيادة القيمة العقارية</h3>
+                    <p>المبنى المعزول جيداً أكثر جاذبية في السوق، مع تصنيف طاقي أفضل وراحة متزايدة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="temoignages" class="testimonials">
+        <div class="container">
+            <h2>ماذا يقول عملاؤنا</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial-item">
+                    <p>"بفضل أكاديمية إيكو فيرت، وجدت مقاولاً معتمداً في الدار البيضاء قام بتحويل منزلي. راحة أكبر وتوفير لا يصدق في فاتورة الكهرباء!"</p>
+                    <h4>أحمد ب.، مالك عقار بالدار البيضاء</h4>
+                </div>
+                <div class="testimonial-item">
+                    <p>"كمطورة عقارية في الرباط، الامتثال هو الأهم. زودتنا أكاديمية إيكو فيرت بخبراء ضمنوا عزلاً مثالياً ومعتمداً لمشروعنا الجديد."</p>
+                    <h4>فاطمة ز.، مطورة بالرباط</h4>
+                </div>
+                <div class="testimonial-item">
+                    <p>"كانت العملية بسيطة وشفافة. من طلب عرض السعر إلى التركيب النهائي، تم كل شيء باحترافية مثالية. أوصي بشدة!"</p>
+                    <h4>عمر ل.، مدير تجاري بتمارة</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2>الأسئلة الشائعة</h2>
+            <div class="faq-item">
+                <h3>ما هو عزل الجدران المجوفة؟</h3>
+                <p>هي تقنية تتضمن حقن مادة عازلة (مثل حبيبات EPS أو رغوة البولي يوريثان) في الفراغ بين الجدارين الخارجيين، مما يحسن من أدائها الحراري.</p>
+            </div>
+            <div class="faq-item">
+                <h3>كم يستغرق التركيب؟</h3>
+                <p>تعتمد المدة على حجم وتعقيد المبنى، ولكن معظم التركيبات السكنية تكتمل في يوم واحد، مع أقل قدر من الإزعاج.</p>
+            </div>
+            <div class="faq-item">
+                <h3>ما هي المواد المستخدمة؟</h3>
+                <p>نركز على حقن حبيبات البوليسترين الموسع (EPS) ورغوة البولي يوريثان، المعروفة بأدائها الحراري العالي ومتانتها.</p>
+            </div>
+            <div class="faq-item">
+                <h3>هل العزل يتوافق مع المعايير المغربية؟</h3>
+                <p>بالتأكيد. يلتزم جميع المقاولين المعتمدين من قبل أكاديمية إيكو فيرت بدقة بالقانون 47-09 بشأن كفاءة الطاقة واللوائح الحرارية للبناء (RTCM) المعمول بها في المغرب.</p>
+            </div>
+            <div class="faq-item">
+                <h3>هل هناك مساعدات أو إعانات متاحة؟</h3>
+                <p>يشجع المغرب كفاءة الطاقة. يمكن لخبرائنا إبلاغكم بالبرامج الحكومية المحتملة أو الحوافز الضريبية المتاحة للعزل.</p>
+            </div>
+            <div class="faq-item">
+                <h3>ما هو الضمان على الأعمال؟</h3>
+                <p>الأعمال التي يقوم بها المقاولون المعتمدون لدينا تستفيد من ضمان لمدة عشر سنوات، مما يضمن استمرارية وأداء عزلكم.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="cta-footer">
+        <div class="container">
+            <h2>هل أنت مستعد لتحويل راحتك وتوفيراتك؟</h2>
+            <p>اتصل بأكاديمية إيكو فيرت اليوم للحصول على استشارة مجانية وعرض سعر مخصص.</p>
+            <form>
+                <input type="text" placeholder="اسمك" required>
+                <input type="email" placeholder="بريدك الإلكتروني" required>
+                <input type="tel" placeholder="رقم هاتفك" required>
+                <textarea placeholder="صف مشروع العزل الخاص بك" rows="5" required></textarea>
+                <button type="submit" class="btn-primary">اطلب عرض سعر</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 أكاديمية إيكو فيرت. جميع الحقوق محفوظة.</p>
+            <div class="social-links">
+                <a href="#">فيسبوك</a>
+                <a href="#">لينكد إن</a>
+                <a href="#">تويتر</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
