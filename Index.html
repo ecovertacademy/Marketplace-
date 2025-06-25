@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoVert Academy - Choose Your Language</title>
+    <meta name="description" content="EcoVert Academy: Premier training and certification platform for cavity wall insulation in Morocco.">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            flex-direction: column;
+        }
+        .language-selector {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            max-width: 500px;
+            width: 90%;
+        }
+        .language-selector h1 {
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+        .language-options {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .language-card {
+            display: block;
+            padding: 20px 30px;
+            border: 2px solid #007bff;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #007bff;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            min-width: 120px;
+        }
+        .language-card:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+        .language-card.arabic {
+            border-color: #28a745;
+            color: #28a745;
+        }
+        .language-card.arabic:hover {
+            background-color: #28a745;
+            color: #fff;
+        }
+        .language-card.french {
+            border-color: #dc3545;
+            color: #dc3545;
+        }
+        .language-card.french:hover {
+            background-color: #dc3545;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="language-selector">
+        <h1>Welcome to EcoVert Academy</h1>
+        <p>Please choose your preferred language:</p>
+        <div class="language-options">
+            <a href="fr/index.html" class="language-card french">Français</a>
+            <a href="ar/index.html" class="language-card arabic">العربية</a>
+        </div>
+    </div>
+</body>
+</html>
