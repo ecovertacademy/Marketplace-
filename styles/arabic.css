@@ -1,0 +1,98 @@
+/* Arabic RTL Specific Styles */
+
+/* RTL Layout Adjustments */
+body[dir="rtl"] {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Header RTL */
+body[dir="rtl"] header .container {
+    flex-direction: row-reverse;
+}
+
+body[dir="rtl"] .logo {
+    flex-direction: row-reverse;
+}
+
+body[dir="rtl"] nav ul {
+    flex-direction: row-reverse;
+}
+
+/* Service List RTL */
+body[dir="rtl"] .service-item {
+    text-align: right;
+}
+
+/* Steps RTL */
+body[dir="rtl"] .step-item {
+    text-align: center; /* Keep centered for better visual balance */
+}
+
+/* Benefits RTL */
+body[dir="rtl"] .benefit-item {
+    border-left: none;
+    border-right: 4px solid #2c5530;
+    text-align: right;
+}
+
+/* Testimonials RTL */
+body[dir="rtl"] .testimonial-item {
+    text-align: right;
+}
+
+/* FAQ RTL */
+body[dir="rtl"] .faq-item h3,
+body[dir="rtl"] .faq-item p {
+    text-align: right;
+}
+
+/* Form RTL */
+body[dir="rtl"] .cta-footer form {
+    text-align: right;
+}
+
+body[dir="rtl"] .cta-footer input,
+body[dir="rtl"] .cta-footer textarea {
+    text-align: right;
+}
+
+/* Footer RTL */
+body[dir="rtl"] footer .container {
+    flex-direction: row-reverse;
+}
+
+body[dir="rtl"] .social-links {
+    flex-direction: row-reverse;
+}
+
+/* Arabic Typography */
+body[dir="rtl"] {
+    font-family: 'Tahoma', 'Arial', sans-serif;
+}
+
+body[dir="rtl"] h1,
+body[dir="rtl"] h2,
+body[dir="rtl"] h3,
+body[dir="rtl"] h4,
+body[dir="rtl"] h5,
+body[dir="rtl"] h6 {
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+/* Responsive RTL Adjustments */
+@media (max-width: 768px) {
+    body[dir="rtl"] header .container {
+        flex-direction: column;
+    }
+    
+    body[dir="rtl"] nav ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    body[dir="rtl"] footer .container {
+        flex-direction: column;
+    }
+}
