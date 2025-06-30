@@ -5,68 +5,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoVert Academy - Choose Your Language</title>
     <meta name="description" content="EcoVert Academy: Premier training and certification platform for cavity wall insulation in Morocco.">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <style>
+        /* Brand Color Variables */
+        :root {
+            --terracotta: #D2691E;
+            --forest-green: #2C5530;
+            --deep-charcoal: #2F2F2F;
+            --sand-beige: #F5F5DC;
+            --thermal-blue: #4A90A4;
+            --warm-gold: #DAA520;
+            --light-green: #4A7C59;
+            --soft-gray: #F8F9FA;
+        }
+        
         body {
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             margin: 0;
-            background-color: #f4f4f4;
-            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, var(--sand-beige) 0%, var(--soft-gray) 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
             flex-direction: column;
         }
         .language-selector {
-            background-color: #fff;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            background-color: white;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(44, 85, 48, 0.15);
             max-width: 500px;
             width: 90%;
+            border: 1px solid rgba(44, 85, 48, 0.1);
         }
         .language-selector h1 {
-            color: #333;
-            margin-bottom: 30px;
-            font-size: 2em;
+            color: var(--forest-green);
+            margin-bottom: 15px;
+            font-size: 2.2em;
+            font-weight: 700;
+        }
+        .language-selector p {
+            color: var(--deep-charcoal);
+            margin-bottom: 35px;
+            font-size: 1.1em;
         }
         .language-options {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 25px;
             flex-wrap: wrap;
         }
         .language-card {
             display: block;
-            padding: 20px 30px;
-            border: 2px solid #007bff;
-            border-radius: 8px;
+            padding: 25px 35px;
+            border: 2px solid var(--forest-green);
+            border-radius: 12px;
             text-decoration: none;
-            color: #007bff;
-            font-size: 1.2em;
+            color: var(--forest-green);
+            font-size: 1.3em;
             font-weight: bold;
-            transition: background-color 0.3s ease, color 0.3s ease;
+            transition: all 0.3s ease;
             min-width: 120px;
         }
         .language-card:hover {
-            background-color: #007bff;
-            color: #fff;
+            background-color: var(--terracotta);
+            color: white;
+            border-color: var(--terracotta);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(210, 105, 30, 0.3);
         }
         .language-card.arabic {
-            border-color: #28a745;
-            color: #28a745;
+            border-color: var(--thermal-blue);
+            color: var(--thermal-blue);
         }
         .language-card.arabic:hover {
-            background-color: #28a745;
-            color: #fff;
+            background-color: var(--thermal-blue);
+            color: white;
+            border-color: var(--thermal-blue);
         }
         .language-card.french {
-            border-color: #dc3545;
-            color: #dc3545;
+            border-color: var(--warm-gold);
+            color: var(--warm-gold);
         }
         .language-card.french:hover {
-            background-color: #dc3545;
-            color: #fff;
+            background-color: var(--warm-gold);
+            color: white;
+            border-color: var(--warm-gold);
+        }
+        
+        @media (max-width: 768px) {
+            .language-selector {
+                padding: 30px 20px;
+            }
+            .language-selector h1 {
+                font-size: 1.8em;
+            }
+            .language-options {
+                flex-direction: column;
+                align-items: center;
+            }
+            .language-card {
+                width: 200px;
+            }
         }
     </style>
 </head>
