@@ -507,7 +507,7 @@ footer .container {
 }
 
 .social-links a:hover {
-    background-color: #d2691e;
+    background-color: var(--terracotta);
 }
 
 /* Responsive Design */
