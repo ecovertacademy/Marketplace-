@@ -668,49 +668,74 @@ div.hero h3,
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
 }
 
-/* Paragraphs */
-.hero p,
-section.hero p,
-div.hero p,
-#home p {
-    font-size: 1.3rem !important;
-    margin-bottom: 40px !important;
-    max-width: 900px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    line-height: 1.8 !important;
-    color: white !important;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
-    text-align: center !important;
+/* Hero Section Fixes - Universal */
+.hero, 
+[class*="hero-"], 
+[class*="-hero"], 
+.hero-section, 
+.jumbotron {
+    position: relative;
+    background: #2c3e50 url('../images/cavity_wall_insulation.jpg') no-repeat center center/cover;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
 }
 
-/* RTL Support for Arabic */
+/* Text Visibility Enhancements */
+.hero h1, 
+.hero h2, 
+.hero-title, 
+.hero-heading,
+[class*="hero-"] h1,
+[class*="hero-"] h2 {
+    color: #ffffff !important;
+    font-weight: 900 !important;
+    font-size: 3rem !important;
+    text-shadow: 
+        2px 2px 0 #000,
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* Background Overlay */
+.hero::before,
+[class*="hero-"]::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%);
+    z-index: 1;
+}
+
+/* RTL Support */
 [dir="rtl"] .hero,
-[dir="rtl"] .hero h1,
-[dir="rtl"] .hero h2,
-[dir="rtl"] .hero h3,
-[dir="rtl"] .hero p,
-html[dir="rtl"] .hero,
-html[dir="rtl"] .hero h1,
-html[dir="rtl"] .hero h2,
-html[dir="rtl"] .hero h3,
-html[dir="rtl"] .hero p {
-    direction: rtl !important;
-    text-align: center !important;
+[dir="rtl"] [class*="hero-"] {
+    text-align: right;
 }
 
-/* Mobile responsiveness */
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
     .hero h1,
-    .hero h2 {
-        font-size: 2.2rem !important;
+    .hero h2,
+    .hero-title {
+        font-size: 2rem !important;
     }
     
-    .hero h3 {
-        font-size: 1.4rem !important;
+    .hero {
+        min-height: 50vh;
     }
-    
-    .hero p {
-        font-size: 1.1rem !important;
-    }
+}
+
+/* Fallback for Broken Images */
+.hero:not([style*="background-image"]) {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%) !important;
 }
