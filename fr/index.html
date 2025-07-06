@@ -4,282 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoVert Academy - Académie d'Excellence en Isolation des Murs Creux</title>
-    <meta name="description" content="EcoVert Academy est la première plateforme marocaine de formation et de certification en isolation des murs creux, connectant installateurs certifiés, fournisseurs et clients résidentiels/commerciaux.">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f8f9fa;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        header {
-            background-color: #2c5530;
-            color: white;
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        .logo h1 {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 5px 10px;
-            border-radius: 4px;
-            transition: background-color 0.3s ease;
-        }
-        nav a:hover {
-            background-color: rgba(255,255,255,0.2);
-        }
-        .lang-switcher a {
-            background-color: #d2691e;
-            color: white;
-            padding: 8px 15px;
-            border-radius: 20px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .hero {
-            background: linear-gradient(135deg, #2c5530 0%, #4a7c59 100%);
-            color: white;
-            padding: 80px 0;
-            text-align: center;
-        }
-        .hero h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            font-weight: bold;
-        }
-        .hero h3 {
-            font-size: 1.5rem;
-            margin-bottom: 30px;
-            color: #f0f8ff;
-        }
-        .hero p {
-            font-size: 1.1rem;
-            margin-bottom: 40px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .btn-primary {
-            background-color: #d2691e;
-            color: white;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 25px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            text-decoration: none;
-            display: inline-block;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-        .btn-primary:hover {
-            background-color: #b8601a;
-            transform: translateY(-2px);
-        }
-        section {
-            padding: 60px 0;
-        }
-        section:nth-child(even) {
-            background-color: white;
-        }
-        section h2 {
-            font-size: 2.2rem;
-            margin-bottom: 30px;
-            text-align: center;
-            color: #2c5530;
-        }
-        section h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: #2c5530;
-        }
-        section p {
-            margin-bottom: 20px;
-            font-size: 1rem;
-            line-height: 1.7;
-        }
-        .service-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        .service-item {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        .service-item h3 {
-            color: #d2691e;
-            margin-bottom: 15px;
-        }
-        .steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        .step-item {
-            text-align: center;
-            padding: 20px;
-        }
-        .step-item span {
-            display: inline-block;
-            width: 50px;
-            height: 50px;
-            background-color: #d2691e;
-            color: white;
-            border-radius: 50%;
-            line-height: 50px;
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-        .benefit-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        .benefit-item {
-            background: white;
-            padding: 25px;
-            border-radius: 8px;
-            border-left: 4px solid #2c5530;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-        }
-        .testimonial-slider {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        .testimonial-item {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-        .testimonial-item p {
-            font-style: italic;
-            margin-bottom: 20px;
-            font-size: 1.1rem;
-        }
-        .testimonial-item h4 {
-            color: #d2691e;
-            font-weight: bold;
-        }
-        .faq-item {
-            background: white;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            overflow: hidden;
-        }
-        .faq-item h3 {
-            background-color: #2c5530;
-            color: white;
-            padding: 20px;
-            margin: 0;
-            cursor: pointer;
-        }
-        .faq-item p {
-            padding: 20px;
-            margin: 0;
-            background-color: #f8f9fa;
-        }
-        .cta-footer {
-            background: linear-gradient(135deg, #2c5530 0%, #4a7c59 100%);
-            color: white;
-            text-align: center;
-        }
-        .cta-footer h2 {
-            color: white;
-            margin-bottom: 20px;
-        }
-        .cta-footer form {
-            max-width: 600px;
-            margin: 0 auto;
-            display: grid;
-            gap: 20px;
-        }
-        .cta-footer input,
-        .cta-footer textarea {
-            padding: 15px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1rem;
-            font-family: inherit;
-        }
-        footer {
-            background-color: #1a1a1a;
-            color: white;
-            padding: 30px 0;
-            text-align: center;
-        }
-        footer .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        .social-links {
-            display: flex;
-            gap: 20px;
-        }
-        .social-links a {
-            color: white;
-            text-decoration: none;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        @media (max-width: 768px) {
-            header .container {
-                flex-direction: column;
-                gap: 20px;
-            }
-            .hero h2 {
-                font-size: 2rem;
-            }
-            .service-list,
-            .steps,
-            .benefit-list,
-            .testimonial-slider {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <meta name="description" content="EcoVert Academy est la première plateforme marocaine de formation et de certification en isolation des murs creux. Connectez-vous avec des installateurs certifiés et des fournisseurs de matériaux de qualité.">
+    <link rel="stylesheet" href="../styles/main.css">
 </head>
 <body>
     <header>
@@ -289,36 +15,38 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#accueil">Accueil</a></li>
-                    <li><a href="#apropos">À Propos</a></li>
+                    <li><a href="#home">Accueil</a></li>
+                    <li><a href="#about">À Propos</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#fonctionnement">Fonctionnement</a></li>
-                    <li><a href="#avantages">Avantages</a></li>
-                    <li><a href="#temoignages">Témoignages</a></li>
+                    <li><a href="#how-it-works">Fonctionnement</a></li>
+                    <li><a href="#benefits">Avantages</a></li>
+                    <li><a href="#testimonials">Témoignages</a></li>
                     <li><a href="#faq">FAQ</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
+                <ul class="lang-switcher">
+                    <li class="lang-switcher"><a href="../ar/index.html">العربية</a></li>
+                </ul>
             </nav>
-            <div class="lang-switcher">
-                <a href="../ar/index.html">العربية</a>
-            </div>
         </div>
     </header>
 
-    <section id="accueil" class="hero">
+    <section id="home" class="hero">
         <div class="container">
             <h2>Maîtrisez l'Isolation des Murs Creux au Maroc</h2>
             <h3>Votre Partenaire pour l'Excellence Énergétique et la Conformité Réglementaire</h3>
             <p>EcoVert Academy est la plateforme leader au Maroc, connectant installateurs certifiés, fournisseurs de matériaux innovants et clients exigeants pour une isolation thermique supérieure. Formez-vous, certifiez-vous et transformez l'habitat marocain.</p>
-            <a href="#contact" class="btn-primary">Demandez un Devis Gratuit</a>
+            <a href="#contact" class="cta-primary">Demandez un Devis Gratuit</a>
         </div>
     </section>
 
-    <section id="apropos" class="about">
+    <section id="about" class="about">
         <div class="container">
             <h2>À Propos d'EcoVert Academy</h2>
             <p>EcoVert Academy est née de la vision de transformer le secteur de l'isolation au Maroc. Nous sommes une plateforme dédiée à l'excellence, à l'innovation et à la durabilité, agissant comme un pont entre les professionnels qualifiés, les matériaux de pointe et les besoins croissants des propriétaires et développeurs.</p>
+            
             <p>Notre mission est de garantir que chaque projet d'isolation respecte les normes les plus élevées de qualité, d'efficacité énergétique et de conformité réglementaire (notamment la Loi 47-09 et les directives de l'AMEE). Nous nous engageons à bâtir un écosystème de confiance où la performance thermique rime avec responsabilité environnementale et confort de vie.</p>
+
             <h3>Nos Valeurs Fondamentales :</h3>
             <ul>
                 <li><strong>Confiance :</strong> Bâtir des relations durables basées sur la transparence et l'intégrité.</li>
@@ -334,28 +62,34 @@
         <div class="container">
             <h2>Nos Services d'Isolation des Murs Creux</h2>
             <p>EcoVert Academy vous connecte aux meilleurs experts et solutions pour une isolation thermique optimale de vos bâtiments.</p>
-            <div class="service-list">
-                <div class="service-item">
+            
+            <div class="service-grid">
+                <div class="service-card">
                     <h3>Isolation par Injection d'EPS</h3>
                     <p>Solution économique et performante, l'injection de billes de polystyrène expansé (EPS) dans les murs creux assure une isolation thermique et acoustique supérieure, réduisant significativement vos factures d'énergie.</p>
                 </div>
-                <div class="service-item">
+                
+                <div class="service-card">
                     <h3>Isolation par Injection de Mousse Polyuréthane</h3>
                     <p>Pour une performance maximale, la mousse polyuréthane injectée offre une isolation sans pont thermique, une étanchéité à l'air parfaite et une durabilité exceptionnelle, idéale pour les projets exigeants.</p>
                 </div>
-                <div class="service-item">
+                
+                <div class="service-card">
                     <h3>Audits Thermiques Détaillés</h3>
                     <p>Nos experts réalisent des diagnostics précis de la performance énergétique de votre bâtiment, identifiant les déperditions thermiques et proposant des solutions d'isolation sur mesure.</p>
                 </div>
-                <div class="service-item">
+                
+                <div class="service-card">
                     <h3>Contrôle de l'Humidité et Ventilation</h3>
                     <p>L'isolation va de pair avec une bonne gestion de l'humidité. Nous proposons des solutions intégrées pour prévenir la condensation et assurer une qualité d'air intérieur saine.</p>
                 </div>
-                <div class="service-item">
+                
+                <div class="service-card">
                     <h3>Certification de Conformité</h3>
                     <p>Obtenez des certificats de conformité reconnus, attestant que votre isolation respecte la Loi 47-09, les normes RTCM et les exigences de l'AMEE, valorisant ainsi votre bien.</p>
                 </div>
-                <div class="service-item">
+                
+                <div class="service-card">
                     <h3>Conseil en Matériaux Écologiques</h3>
                     <p>Nous vous guidons vers les matériaux d'isolation les plus durables et respectueux de l'environnement, alignés avec les principes ESG et les objectifs de développement durable du Maroc.</p>
                 </div>
@@ -363,33 +97,38 @@
         </div>
     </section>
 
-    <section id="fonctionnement" class="how-it-works">
+    <section id="how-it-works" class="process">
         <div class="container">
             <h2>Comment Ça Marche ?</h2>
             <p>Notre plateforme simplifie le processus d'isolation, du devis à la certification.</p>
-            <div class="steps">
-                <div class="step-item">
-                    <span>1</span>
+            
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
                     <h3>Demandez Votre Devis</h3>
                     <p>Remplissez notre formulaire en ligne avec les détails de votre projet. C'est rapide et gratuit.</p>
                 </div>
-                <div class="step-item">
-                    <span>2</span>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
                     <h3>Recevez des Offres Certifiées</h3>
                     <p>Nous vous mettons en relation avec des installateurs certifiés et des fournisseurs de matériaux, tous vérifiés par EcoVert Academy.</p>
                 </div>
-                <div class="step-item">
-                    <span>3</span>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
                     <h3>Choisissez Votre Expert</h3>
                     <p>Comparez les devis, consultez les profils des professionnels et sélectionnez l'offre qui vous convient le mieux.</p>
                 </div>
-                <div class="step-item">
-                    <span>4</span>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
                     <h3>Réalisation et Inspection</h3>
                     <p>L'installation est effectuée selon les normes les plus strictes. Une inspection post-travaux garantit la qualité.</p>
                 </div>
-                <div class="step-item">
-                    <span>5</span>
+                
+                <div class="step">
+                    <div class="step-number">5</div>
                     <h3>Certification et Garantie</h3>
                     <p>Recevez votre certificat de conformité et bénéficiez de la garantie EcoVert Academy pour une tranquillité d'esprit totale.</p>
                 </div>
@@ -397,32 +136,38 @@
         </div>
     </section>
 
-    <section id="avantages" class="benefits">
+    <section id="benefits" class="benefits">
         <div class="container">
             <h2>Les Avantages de l'Isolation des Murs Creux</h2>
             <p>Investir dans l'isolation, c'est investir dans votre confort, votre portefeuille et l'avenir de la planète.</p>
-            <div class="benefit-list">
-                <div class="benefit-item">
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
                     <h3>Économies d'Énergie Substantielles</h3>
                     <p>Réduisez vos factures de chauffage et de climatisation jusqu'à 30-40% en minimisant les déperditions thermiques.</p>
                 </div>
-                <div class="benefit-item">
+                
+                <div class="benefit-card">
                     <h3>Confort Thermique Optimal</h3>
                     <p>Profitez d'une température intérieure stable et agréable toute l'année, sans courants d'air ni zones froides.</p>
                 </div>
-                <div class="benefit-item">
+                
+                <div class="benefit-card">
                     <h3>Conformité Réglementaire</h3>
                     <p>Respectez la Loi 47-09 sur l'efficacité énergétique et les réglementations de construction marocaines, valorisant ainsi votre bien.</p>
                 </div>
-                <div class="benefit-item">
+                
+                <div class="benefit-card">
                     <h3>Réduction de l'Empreinte Carbone</h3>
                     <p>Contribuez à la lutte contre le changement climatique en diminuant les émissions de CO2 de votre bâtiment.</p>
                 </div>
-                <div class="benefit-item">
+                
+                <div class="benefit-card">
                     <h3>Amélioration de la Qualité de l'Air Intérieur</h3>
                     <p>Une bonne isolation réduit les problèmes d'humidité et de moisissures, favorisant un environnement plus sain.</p>
                 </div>
-                <div class="benefit-item">
+                
+                <div class="benefit-card">
                     <h3>Valorisation Immobilière</h3>
                     <p>Un bâtiment bien isolé est plus attractif sur le marché, avec une meilleure classification énergétique et un confort accru.</p>
                 </div>
@@ -430,19 +175,22 @@
         </div>
     </section>
 
-    <section id="temoignages" class="testimonials">
+    <section id="testimonials" class="testimonials">
         <div class="container">
             <h2>Ce Que Nos Clients Disent</h2>
-            <div class="testimonial-slider">
-                <div class="testimonial-item">
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
                     <p>"Grâce à EcoVert Academy, j'ai trouvé un installateur certifié à Casablanca qui a transformé ma maison. Plus de confort et des économies incroyables sur ma facture d'électricité !"</p>
                     <h4>Ahmed B., Propriétaire à Casablanca</h4>
                 </div>
-                <div class="testimonial-item">
+                
+                <div class="testimonial-card">
                     <p>"En tant que développeur immobilier à Rabat, la conformité est primordiale. EcoVert Academy nous a fourni des experts qui ont assuré une isolation parfaite et certifiée pour notre nouveau projet."</p>
                     <h4>Fatima Z., Développeuse à Rabat</h4>
                 </div>
-                <div class="testimonial-item">
+                
+                <div class="testimonial-card">
                     <p>"Le processus était simple et transparent. De la demande de devis à l'installation finale, tout a été géré avec un professionnalisme exemplaire. Je recommande vivement !"</p>
                     <h4>Omar L., Gérant Commercial à Temara</h4>
                 </div>
@@ -453,56 +201,144 @@
     <section id="faq" class="faq">
         <div class="container">
             <h2>Questions Fréquemment Posées</h2>
-            <div class="faq-item">
-                <h3>Qu'est-ce que l'isolation des murs creux ?</h3>
-                <p>C'est une technique qui consiste à injecter un matériau isolant (comme des billes d'EPS ou de la mousse polyuréthane) dans l'espace vide entre les deux parois d'un mur extérieur, améliorant ainsi sa performance thermique.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Combien de temps dure l'installation ?</h3>
-                <p>La durée dépend de la taille et de la complexité du bâtiment, mais la plupart des installations résidentielles sont complétées en une seule journée, avec un minimum de perturbations.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Quels sont les matériaux utilisés ?</h3>
-                <p>Nous nous concentrons sur l'injection de billes de polystyrène expansé (EPS) et de mousse polyuréthane, reconnus pour leur haute performance thermique et leur durabilité.</p>
-            </div>
-            <div class="faq-item">
-                <h3>L'isolation est-elle conforme aux normes marocaines ?</h3>
-                <p>Absolument. Tous les installateurs certifiés par EcoVert Academy respectent scrupuleusement la Loi 47-09 sur l'efficacité énergétique et les réglementations thermiques de construction (RTCM) en vigueur au Maroc.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Y a-t-il des aides ou subventions disponibles ?</h3>
-                <p>Le Maroc encourage l'efficacité énergétique. Nos experts peuvent vous informer sur les éventuels programmes gouvernementaux ou incitations fiscales disponibles pour l'isolation.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Quelle est la garantie sur les travaux ?</h3>
-                <p>Les travaux réalisés par nos installateurs certifiés bénéficient d'une garantie décennale, assurant la pérennité et la performance de votre isolation.</p>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>Qu'est-ce que l'isolation des murs creux ?</h3>
+                    <p>C'est une technique qui consiste à injecter un matériau isolant (comme des billes d'EPS ou de la mousse polyuréthane) dans l'espace vide entre les deux parois d'un mur extérieur, améliorant ainsi sa performance thermique.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Combien de temps dure l'installation ?</h3>
+                    <p>La durée dépend de la taille et de la complexité du bâtiment, mais la plupart des installations résidentielles sont complétées en une seule journée, avec un minimum de perturbations.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Quels sont les matériaux utilisés ?</h3>
+                    <p>Nous nous concentrons sur l'injection de billes de polystyrène expansé (EPS) et de mousse polyuréthane, reconnus pour leur haute performance thermique et leur durabilité.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>L'isolation est-elle conforme aux normes marocaines ?</h3>
+                    <p>Absolument. Tous les installateurs certifiés par EcoVert Academy respectent scrupuleusement la Loi 47-09 sur l'efficacité énergétique et les réglementations thermiques de construction (RTCM) en vigueur au Maroc.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Y a-t-il des aides ou subventions disponibles ?</h3>
+                    <p>Le Maroc encourage l'efficacité énergétique. Nos experts peuvent vous informer sur les éventuels programmes gouvernementaux ou incitations fiscales disponibles pour l'isolation.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Quelle est la garantie sur les travaux ?</h3>
+                    <p>Les travaux réalisés par nos installateurs certifiés bénéficient d'une garantie décennale, assurant la pérennité et la performance de votre isolation.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="cta-footer">
+    <section id="contact" class="contact">
         <div class="container">
             <h2>Prêt à Transformer Votre Confort et Vos Économies ?</h2>
             <p>Contactez EcoVert Academy dès aujourd'hui pour une consultation gratuite et un devis personnalisé.</p>
-            <form>
-                <input type="text" placeholder="Votre Nom" required>
-                <input type="email" placeholder="Votre Email" required>
-                <input type="tel" placeholder="Votre Téléphone" required>
-                <textarea placeholder="Décrivez Votre Projet d'Isolation" rows="5" required></textarea>
-                <button type="submit" class="btn-primary">Demander un Devis</button>
+            
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nom Complet</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Téléphone</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="city">Ville</label>
+                    <select id="city" name="city" required>
+                        <option value="">Sélectionnez votre ville</option>
+                        <option value="casablanca">Casablanca</option>
+                        <option value="rabat">Rabat</option>
+                        <option value="marrakech">Marrakech</option>
+                        <option value="fes">Fès</option>
+                        <option value="tangier">Tanger</option>
+                        <option value="agadir">Agadir</option>
+                        <option value="meknes">Meknès</option>
+                        <option value="oujda">Oujda</option>
+                        <option value="kenitra">Kénitra</option>
+                        <option value="tetouan">Tétouan</option>
+                        <option value="other">Autre</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="property-type">Type de Propriété</label>
+                    <select id="property-type" name="property-type" required>
+                        <option value="">Sélectionnez le type</option>
+                        <option value="house">Maison individuelle</option>
+                        <option value="apartment">Appartement</option>
+                        <option value="commercial">Bâtiment commercial</option>
+                        <option value="industrial">Bâtiment industriel</option>
+                        <option value="other">Autre</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Décrivez votre projet d'isolation..."></textarea>
+                </div>
+                
+                <button type="submit" class="cta-primary">Demander un Devis</button>
             </form>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 EcoVert Academy. Tous droits réservés.</p>
-            <div class="social-links">
-                <a href="#">Facebook</a>
-                <a href="#">LinkedIn</a>
-                <a href="#">Twitter</a>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>EcoVert Academy</h3>
+                    <p>Votre partenaire de confiance pour l'excellence en isolation des murs creux au Maroc.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Isolation EPS</a></li>
+                        <li><a href="#services">Isolation Polyuréthane</a></li>
+                        <li><a href="#services">Audits Thermiques</a></li>
+                        <li><a href="#services">Certification</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Ressources</h4>
+                    <ul>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#about">À Propos</a></li>
+                        <li><a href="#testimonials">Témoignages</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: info@ecovertacademy.ma</p>
+                    <p>Téléphone: +212 5XX-XXXXXX</p>
+                    <p>Adresse: Casablanca, Maroc</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 EcoVert Academy. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
+
+    <script src="../scripts/main.js"></script>
 </body>
 </html>
