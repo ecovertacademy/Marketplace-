@@ -658,7 +658,6 @@ div.hero h3,
     }
 }
 
-/* Fallback for Broken Images */
 .hero:not([style*="background-image"]) {
-    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%) !important;
+    background: linear-gradient(135deg, #2C5530 0%, #4A7C59 100%) !important;
 }
