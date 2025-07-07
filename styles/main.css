@@ -636,21 +636,6 @@ div.hero h3,
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
 }
 
-/* Hero Section Fixes - Universal */
-.hero, 
-[class*="hero-"], 
-[class*="-hero"], 
-.hero-section, 
-.jumbotron {
-    position: relative;
-    background: #2c3e50 url('../images/cavity_wall_insulation.jpg') no-repeat center center/cover;
-    min-height: 60vh;
-    display: flex;
-    align-items: center;
-    padding: 2rem;
-    text-align: center;
-}
-
 /* Text Visibility Enhancements */
 .hero h1, 
 .hero h2, 
