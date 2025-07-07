@@ -560,27 +560,6 @@ footer .container {
     }
 }
 
-.hero,
-section.hero,
-div.hero,
-#home.hero,
-section#home {
-    /* Background with correct image path */
-    background: linear-gradient(135deg, rgba(44, 85, 48, 0.85) 0%, rgba(74, 124, 89, 0.85) 100%), 
-                url('../images/cavity_wall_insulation.png.jpg') center/cover no-repeat !important;
-    
-    /* Fallback if image doesn't load */
-    background-color: var(--forest-green) !important;
-    
-    /* Text and layout */
-    color: white !important;
-    padding: 120px 0 !important;
-    text-align: center !important;
-    position: relative !important;
-    min-height: 700px !important;
-    display: flex !important;
-    align-items: center !important;
-}
 
 /* Strong overlay for text readability */
 .hero::before,
