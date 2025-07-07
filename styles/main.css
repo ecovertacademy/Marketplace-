@@ -106,7 +106,7 @@ nav a:hover {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, rgba(44, 85, 48, 0.95) 0%, rgba(74, 124, 89, 0.95) 100%), 
+    background: linear-gradient(135deg, rgba(44, 85, 48, 0.4) 0%, rgba(74, 124, 89, 0.4) 100%), 
                 url('../images/cavity_wall_insulation.png.jpg') center/cover no-repeat;
     color: white;
     padding: 100px 0;
