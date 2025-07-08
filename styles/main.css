@@ -674,3 +674,22 @@ div.hero h3,
     margin: 15px 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+#services {
+    background: linear-gradient(135deg, rgba(248, 249, 250, 0.85) 0%, rgba(245, 245, 220, 0.85) 100%),
+                url('../images/modern_morocco_architecture.webp.jpg') center/cover no-repeat !important;
+    background-color: #F8F9FA !important; /* Soft gray fallback */
+    position: relative;
+    padding: 80px 0;
+}
+
+/* Ensure service cards remain visible */
+#services .service-item {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(2px);
+    border-radius: 8px;
+    padding: 25px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid var(--terracotta);
+}
