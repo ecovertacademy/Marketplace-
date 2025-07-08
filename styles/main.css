@@ -693,3 +693,28 @@ div.hero h3,
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-left: 4px solid var(--terracotta);
 }
+
+/* Enhance section title */
+#services h2 {
+    color: var(--forest-green) !important;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px 35px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+/* Enhance section subtitle */
+#services > .container > p {
+    color: var(--text-dark) !important;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px 25px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-bottom: 50px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+}
