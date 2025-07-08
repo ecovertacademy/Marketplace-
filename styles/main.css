@@ -104,47 +104,53 @@ nav a:hover {
     transform: translateY(-1px);
 }
 
-/* Hero Section */
+/* ===== HERO SECTION - Cavity Wall Insulation Diagram ===== */
 .hero {
     background: linear-gradient(135deg, rgba(44, 85, 48, 0.4) 0%, rgba(74, 124, 89, 0.4) 100%), 
-                url('../images/cavity_wall_insulation.png.jpg') center/contain no-repeat; !important;
+                url('../images/cavity_wall_insulation.png.jpg') center/contain no-repeat !important;
+    background-color: #2C5530 !important;
     color: white;
     padding: 100px 0;
     text-align: center;
     position: relative;
     min-height: 600px;
+    display: flex;
+    align-items: center;
 }
 
 .hero .container {
-    position: relative;
-    z-index: 2;
+    position: relative !important;
+    z-index: 2 !important;
+    width: 100% !important;
 }
 
+.hero h1,
 .hero h2 {
-    font-size: 2.8rem;
-    margin-bottom: 20px;
-    font-weight: bold;
     color: white !important;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-weight: 900 !important;
+    font-size: 3rem !important;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9) !important;
+    margin-bottom: 25px !important;
+    line-height: 1.2 !important;
 }
 
 .hero h3 {
-    font-size: 1.6rem;
-    margin-bottom: 30px;
+    font-size: 1.8rem !important;
     color: #F5F5DC !important;
-    font-weight: 400;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    font-weight: 600 !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
+    margin-bottom: 30px;
 }
 
 .hero p {
-    font-size: 1.2rem;
+    font-size: 1.2rem !important;
     margin-bottom: 40px;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
     line-height: 1.8;
     color: white !important;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5) !important;
 }
 
 /* Button Styles */
@@ -204,6 +210,38 @@ section p {
     color: var(--deep-charcoal);
 }
 
+/* ===== SERVICES SECTION - Modern Morocco Architecture ===== */
+#services {
+    background: linear-gradient(135deg, rgba(248, 249, 250, 0.85) 0%, rgba(245, 245, 220, 0.85) 100%),
+                url('../images/modern_morocco_architecture.webp.jpg') center/cover no-repeat !important;
+    background-color: #F8F9FA !important;
+    padding: 80px 0;
+    position: relative;
+}
+
+#services h2 {
+    color: var(--forest-green) !important;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px 35px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+#services > .container > p {
+    color: var(--text-dark) !important;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px 25px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-bottom: 50px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
 /* Service List */
 .service-list {
     display: grid;
@@ -213,24 +251,36 @@ section p {
 }
 
 .service-item {
-    background: var(--white);
-    padding: 35px;
-    border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(44, 85, 48, 0.1);
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(2px);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid var(--terracotta);
     transition: all 0.3s ease;
-    border: 1px solid rgba(44, 85, 48, 0.1);
+    margin: 20px 0;
 }
 
 .service-item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(44, 85, 48, 0.2);
-    border-color: var(--terracotta);
+    background: rgba(255, 255, 255, 1) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    border-left: 6px solid var(--terracotta);
 }
 
 .service-item h3 {
-    color: var(--terracotta);
-    margin-bottom: 20px;
+    color: var(--forest-green) !important;
+    border-bottom: 3px solid var(--terracotta);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
     font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.service-item p {
+    color: var(--text-dark) !important;
+    line-height: 1.7;
+    font-size: 1rem;
 }
 
 /* Steps/How It Works */
@@ -274,27 +324,36 @@ section p {
     font-size: 1.3rem;
 }
 
-/* Benefits */
-.benefits {
-    background: linear-gradient(135deg, rgba(245, 245, 220, 0.95) 0%, rgba(248, 249, 250, 0.95) 100%), 
-                url('../images/modern_morocco_architecture.webp.jpg') center/cover no-repeat;
+/* ===== BENEFITS SECTION - Energy Efficient Building ===== */
+#benefits {
+    background: linear-gradient(135deg, rgba(245, 245, 220, 0.85) 0%, rgba(248, 249, 250, 0.85) 100%),
+                url('../images/energy_efficient_building.jpg.jpg') center/cover no-repeat !important;
+    background-color: #F5F5DC !important;
+    padding: 80px 0;
     position: relative;
 }
 
-.benefits::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(245, 245, 220, 0.9) 0%, rgba(248, 249, 250, 0.9) 100%);
-    z-index: 1;
+#benefits h2 {
+    color: var(--forest-green) !important;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px 30px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    font-weight: 700;
 }
 
-.benefits .container {
-    position: relative;
-    z-index: 2;
+#benefits > .container > p {
+    color: var(--text-dark) !important;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px 25px;
+    border-radius: 6px;
+    display: inline-block;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+    line-height: 1.6;
 }
 
 .benefit-list {
@@ -305,26 +364,36 @@ section p {
 }
 
 .benefit-item {
-    background: rgba(255, 255, 255, 0.95);
-    padding: 30px;
-    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(2px);
+    padding: 20px;
+    border-radius: 8px;
     border-left: 5px solid var(--warm-gold);
-    box-shadow: 0 8px 25px rgba(218, 165, 32, 0.15);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
-    backdrop-filter: blur(5px);
+    margin: 15px 0;
 }
 
 .benefit-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(218, 165, 32, 0.25);
+    background: rgba(255, 255, 255, 1) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     border-left-color: var(--terracotta);
-    background: rgba(255, 255, 255, 1);
 }
 
 .benefit-item h3 {
-    color: var(--forest-green);
-    margin-bottom: 15px;
-    font-size: 1.4rem;
+    color: var(--forest-green) !important;
+    border-bottom: 2px solid var(--terracotta);
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.benefit-item p {
+    color: var(--text-dark) !important;
+    line-height: 1.6;
+    font-size: 1rem;
 }
 
 /* Testimonials */
@@ -410,18 +479,6 @@ section p {
     position: relative;
 }
 
-.cta-footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('../images/energy_efficient_building.jpg.jpg') center/cover no-repeat;
-    opacity: 0.1;
-    z-index: 1;
-}
-
 .cta-footer .container {
     position: relative;
     z-index: 2;
@@ -460,23 +517,11 @@ section p {
 
 /* Footer */
 footer {
-    background: linear-gradient(135deg, rgba(47, 47, 47, 0.95) 0%, rgba(26, 26, 26, 0.95) 100%), 
-                url('../images/modern_morocco_architecture.webp.jpg') center/cover no-repeat;
+    background: linear-gradient(135deg, rgba(47, 47, 47, 0.95) 0%, rgba(26, 26, 26, 0.95) 100%);
     color: white;
     padding: 40px 0;
     text-align: center;
     position: relative;
-}
-
-footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(47, 47, 47, 0.9) 0%, rgba(26, 26, 26, 0.9) 100%);
-    z-index: 1;
 }
 
 footer .container {
@@ -505,7 +550,8 @@ footer .container {
     background-color: var(--terracotta);
 }
 
-/* Responsive Design */
+/* ===== RESPONSIVE DESIGN ===== */
+/* Mobile optimization */
 @media (max-width: 768px) {
     header .container {
         flex-direction: column;
@@ -516,12 +562,47 @@ footer .container {
         justify-content: center;
     }
     
+    .hero {
+        min-height: 500px;
+        padding: 60px 0;
+    }
+    
+    .hero h1,
     .hero h2 {
-        font-size: 2rem;
+        font-size: 2.2rem !important;
     }
     
     .hero h3 {
-        font-size: 1.2rem;
+        font-size: 1.5rem !important;
+    }
+    
+    .hero p {
+        font-size: 1.1rem !important;
+    }
+    
+    #services {
+        padding: 60px 0;
+    }
+    
+    #services h2 {
+        font-size: 2rem;
+        padding: 15px 25px;
+    }
+    
+    #services .service-item {
+        background: rgba(255, 255, 255, 0.98) !important;
+        margin: 15px 0;
+        padding: 20px;
+    }
+    
+    #benefits {
+        padding: 60px 0;
+    }
+    
+    #benefits .benefit-item {
+        background: rgba(255, 255, 255, 0.98) !important;
+        margin: 10px 0;
+        padding: 15px;
     }
     
     .service-list,
@@ -537,6 +618,36 @@ footer .container {
     }
 }
 
+/* Tablet optimization */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hero {
+        min-height: 550px;
+    }
+    
+    #services {
+        padding: 70px 0;
+    }
+    
+    #benefits {
+        padding: 70px 0;
+    }
+}
+
+/* Desktop optimization */
+@media (min-width: 1025px) {
+    .hero {
+        min-height: 650px;
+    }
+    
+    #services {
+        padding: 100px 0;
+    }
+    
+    #benefits {
+        padding: 100px 0;
+    }
+}
+
 @media (max-width: 480px) {
     .container {
         padding: 0 15px;
@@ -547,11 +658,13 @@ footer .container {
     }
     
     .hero {
-        padding: 60px 0;
+        padding: 40px 0;
+        min-height: 450px;
     }
     
+    .hero h1,
     .hero h2 {
-        font-size: 1.8rem;
+        font-size: 1.8rem !important;
     }
     
     .service-item,
@@ -560,210 +673,40 @@ footer .container {
     }
 }
 
-/* Container positioning */
-.hero .container,
-.hero > .container,
-section.hero .container,
-div.hero .container,
-#home.hero .container,
-section#home .container {
-    position: relative !important;
-    z-index: 2 !important;
-    width: 100% !important;
-}
-
-/* ALL HEADINGS - Maximum Visibility */
-.hero h1,
-.hero h2,
-.hero h3,
-section.hero h1,
-section.hero h2,
-section.hero h3,
-div.hero h1,
-div.hero h2,
-div.hero h3,
-#home h1,
-#home h2,
-#home h3 {
-    color: white !important;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9) !important;
-    font-weight: bold !important;
-    margin-bottom: 25px !important;
-    line-height: 1.2 !important;
-    text-align: center !important;
-}
-
-/* Main headings (h1, h2) */
-.hero h1,
-.hero h2,
-section.hero h1,
-section.hero h2,
-div.hero h1,
-div.hero h2,
-#home h1,
-#home h2 {
-    font-size: 3rem !important;
-    font-weight: 900 !important;
-    color: #FFFFFF !important;
-    text-shadow: 4px 4px 8px rgba(0, 0, 0, 1) !important;
-}
-
-/* Subheadings (h3) */
-.hero h3,
-section.hero h3,
-div.hero h3,
-#home h3 {
-    font-size: 1.8rem !important;
-    color: #F5F5DC !important;
-    font-weight: 600 !important;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
-}
-
-/* Text Visibility Enhancements */
-.hero h1, 
-.hero h2, 
-.hero-title, 
-.hero-heading,
-[class*="hero-"] h1,
-[class*="hero-"] h2 {
-    color: #ffffff !important;
-    font-weight: 900 !important;
-    font-size: 3rem !important;
-    text-shadow: 
-        2px 2px 0 #000,
-        -1px -1px 0 #000,
-        1px -1px 0 #000,
-        -1px 1px 0 #000;
-    margin-bottom: 1.5rem;
-    position: relative;
-    z-index: 2;
-}
-
 /* RTL Support */
 [dir="rtl"] .hero,
 [dir="rtl"] [class*="hero-"] {
     text-align: right;
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
+/* Accessibility Enhancements */
+.hero *:focus,
+#services *:focus,
+#benefits *:focus {
+    outline: 3px solid var(--warm-gold);
+    outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+    .hero,
+    #services,
+    #benefits {
+        background: white !important;
+        color: black !important;
+    }
+    
     .hero h1,
     .hero h2,
-    .hero-title {
-        font-size: 2rem !important;
+    .hero h3,
+    .hero p {
+        color: black !important;
+        text-shadow: none !important;
     }
     
-    .hero {
-        min-height: 50vh;
-    }
-}
-
-#benefits {
-    background: linear-gradient(135deg, rgba(245, 245, 220, 0.85) 0%, rgba(248, 249, 250, 0.85) 100%),
-                url('../images/energy_efficient_building.jpg.jpg') center/cover no-repeat !important;
-    background-color: #F5F5DC !important; /* Sand beige fallback */
-    position: relative;
-}
-
-/* Ensure benefit cards remain visible */
-#benefits .benefit-item {
-    background: rgba(255, 255, 255, 0.95) !important;
-    backdrop-filter: blur(2px);
-    border-radius: 8px;
-    padding: 20px;
-    margin: 15px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-#benefits h2 {
-    color: var(--forest-green) !important;
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
-    background: rgba(255, 255, 255, 0.9);
-    padding: 15px 30px;
-    border-radius: 8px;
-    display: inline-block;
-    margin-bottom: 30px;
-}
-
-#benefits > .container > p {
-    color: var(--text-dark) !important;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 15px 25px;
-    border-radius: 6px;
-    display: inline-block;
-    margin-bottom: 40px;
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
-
-/* Mobile optimization */
-@media (max-width: 768px) {
-    #benefits {
-        background-size: cover !important;
-        background-position: center center !important;
-        background-attachment: scroll !important; /* Disable fixed on mobile */
-    }
-    
+    #services .service-item,
     #benefits .benefit-item {
-        background: rgba(255, 255, 255, 0.98) !important;
-        margin: 10px 0;
-        padding: 15px;
+        background: white !important;
+        border: 1px solid #ccc;
     }
-}
-/* Tablet optimization */
-@media (min-width: 769px) and (max-width: 1024px) {
-    #benefits {
-        background-size: cover !important;
-        background-position: center center !important;
-    }
-}
-
-/* Desktop optimization */
-@media (min-width: 1025px) {
-    #benefits {
-        background-size: cover !important;
-        background-position: center center !important;
-    }
-#services {
-    background: linear-gradient(135deg, rgba(248, 249, 250, 0.85) 0%, rgba(245, 245, 220, 0.85) 100%),
-                url('../images/modern_morocco_architecture.webp.jpg') center/cover no-repeat !important;
-    background-color: #F8F9FA !important; /* Soft gray fallback */
-    position: relative;
-    padding: 80px 0;
-}
-
-/* Ensure service cards remain visible */
-#services .service-item {
-    background: rgba(255, 255, 255, 0.95) !important;
-    backdrop-filter: blur(2px);
-    border-radius: 8px;
-    padding: 25px;
-    margin: 20px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-left: 4px solid var(--terracotta);
-}
-
-/* Enhance section title */
-#services h2 {
-    color: var(--forest-green) !important;
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
-    background: rgba(255, 255, 255, 0.95);
-    padding: 20px 35px;
-    border-radius: 10px;
-    display: inline-block;
-    margin-bottom: 30px;
-    font-size: 2.5rem;
-}
-
-/* Enhance section subtitle */
-#services > .container > p {
-    color: var(--text-dark) !important;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 15px 25px;
-    border-radius: 8px;
-    display: inline-block;
-    margin-bottom: 50px;
-    font-size: 1.2rem;
-    line-height: 1.6;
-    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
 }
